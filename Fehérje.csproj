@@ -50,7 +50,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="aminosavak.json" />
     <None Include="App.config" />
+    <None Include="bsa.json" />
     <None Include="e_prog_2006_maj.pdf" />
     <None Include="packages.config" />
   </ItemGroup>

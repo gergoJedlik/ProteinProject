@@ -1,0 +1,202 @@
+[
+    {
+        "Név": "Glicin",
+        "Betûjel": "G",
+        "Rövidítés": "Gly",
+        "C": 2,
+        "H": 5,
+        "O": 2,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Alanin",
+        "Betûjel": "A",
+        "Rövidítés": "Ala",
+        "C": 3,
+        "H": 7,
+        "O": 2,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Arginin",
+        "Betûjel": "R",
+        "Rövidítés": "Arg",
+        "C": 6,
+        "H": 14,
+        "O": 2,
+        "N": 4,
+        "S": 0
+    },
+    {
+        "Név": "Fenilalanin",
+        "Betûjel": "F",
+        "Rövidítés": "Phe",
+        "C": 9,
+        "H": 11,
+        "O": 2,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Cisztein",
+        "Betûjel": "C",
+        "Rövidítés": "Cys",
+        "C": 3,
+        "H": 7,
+        "O": 2,
+        "N": 1,
+        "S": 1
+    },
+    {
+        "Név": "Triptofán",
+        "Betûjel": "W",
+        "Rövidítés": "Trp",
+        "C": 11,
+        "H": 12,
+        "O": 2,
+        "N": 2,
+        "S": 0
+    },
+    {
+        "Név": "Valin",
+        "Betûjel": "V",
+        "Rövidítés": "Val",
+        "C": 5,
+        "H": 11,
+        "O": 2,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Leucin",
+        "Betûjel": "L",
+        "Rövidítés": "Leu",
+        "C": 6,
+        "H": 13,
+        "O": 2,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Izoleucin",
+        "Betûjel": "I",
+        "Rövidítés": "Ile",
+        "C": 6,
+        "H": 13,
+        "O": 2,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Metionin",
+        "Betûjel": "M",
+        "Rövidítés": "Met",
+        "C": 5,
+        "H": 11,
+        "O": 2,
+        "N": 1,
+        "S": 1
+    },
+    {
+        "Név": "Prolin",
+        "Betûjel": "P",
+        "Rövidítés": "Pro",
+        "C": 5,
+        "H": 9,
+        "O": 2,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Szerin",
+        "Betûjel": "S",
+        "Rövidítés": "Ser",
+        "C": 3,
+        "H": 7,
+        "O": 3,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Treonin",
+        "Betûjel": "T",
+        "Rövidítés": "Thr",
+        "C": 4,
+        "H": 9,
+        "O": 3,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Aszparagin",
+        "Betûjel": "N",
+        "Rövidítés": "Asn",
+        "C": 4,
+        "H": 8,
+        "O": 3,
+        "N": 2,
+        "S": 0
+    },
+    {
+        "Név": "Glutamin",
+        "Betûjel": "Q",
+        "Rövidítés": "Gln",
+        "C": 5,
+        "H": 10,
+        "O": 3,
+        "N": 2,
+        "S": 0
+    },
+    {
+        "Név": "Tirozin",
+        "Betûjel": "Y",
+        "Rövidítés": "Tyr",
+        "C": 9,
+        "H": 11,
+        "O": 3,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Hisztidin",
+        "Betûjel": "H",
+        "Rövidítés": "His",
+        "C": 6,
+        "H": 9,
+        "O": 2,
+        "N": 3,
+        "S": 0
+    },
+    {
+        "Név": "Lizin",
+        "Betûjel": "K",
+        "Rövidítés": "Lys",
+        "C": 6,
+        "H": 14,
+        "O": 2,
+        "N": 2,
+        "S": 0
+    },
+    {
+        "Név": "Aszparaginsav",
+        "Betûjel": "D",
+        "Rövidítés": "Asp",
+        "C": 4,
+        "H": 7,
+        "O": 4,
+        "N": 1,
+        "S": 0
+    },
+    {
+        "Név": "Glutaminsav",
+        "Betûjel": "E",
+        "Rövidítés": "Glu",
+        "C": 5,
+        "H": 9,
+        "O": 4,
+        "N": 1,
+        "S": 0
+    }
+]
