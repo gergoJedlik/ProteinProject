@@ -10,14 +10,10 @@ namespace Fehérje
     {
         static void Main(string[] args)
         {
-            //reader r = new reader("Z:\\00_PROG\\C#\\Fehérje project\\Fehérje\\aminosavak.json");
-            //List<Aminosav> savak = r.readJSON();
-
-            //foreach (var item in savak) {
-                //Console.WriteLine(item.Nev);
-                //Console.WriteLine(item.anyagok);
-            //}
-
+            Megoldás m = new Megoldás("../../aminosavak.json");
+            //Console.WriteLine(m.SavakSzámaPróba);
+            //Console.WriteLine(m.AminosavKiírPróba);
+            Console.WriteLine("1. Feladat: ");
             Console.ReadKey();
         }
     }
