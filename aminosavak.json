@@ -1,8 +1,8 @@
 [
     {
-        "Név": "Glicin",
-        "Betûjel": "G",
-        "Rövidítés": "Gly",
+        "Nev": "Glicin",
+        "Betujel": "G",
+        "Rovidites": "Gly",
         "C": 2,
         "H": 5,
         "O": 2,
@@ -10,9 +10,9 @@
         "S": 0
     },
     {
-        "Név": "Alanin",
-        "Betûjel": "A",
-        "Rövidítés": "Ala",
+        "Nev": "Alanin",
+        "Betujel": "A",
+        "Rovidites": "Ala",
         "C": 3,
         "H": 7,
         "O": 2,
@@ -20,9 +20,9 @@
         "S": 0
     },
     {
-        "Név": "Arginin",
-        "Betûjel": "R",
-        "Rövidítés": "Arg",
+        "Nev": "Arginin",
+        "Betujel": "R",
+        "Rovidites": "Arg",
         "C": 6,
         "H": 14,
         "O": 2,
@@ -30,9 +30,9 @@
         "S": 0
     },
     {
-        "Név": "Fenilalanin",
-        "Betûjel": "F",
-        "Rövidítés": "Phe",
+        "Nev": "Fenilalanin",
+        "Betujel": "F",
+        "Rovidites": "Phe",
         "C": 9,
         "H": 11,
         "O": 2,
@@ -40,9 +40,9 @@
         "S": 0
     },
     {
-        "Név": "Cisztein",
-        "Betûjel": "C",
-        "Rövidítés": "Cys",
+        "Nev": "Cisztein",
+        "Betujel": "C",
+        "Rovidites": "Cys",
         "C": 3,
         "H": 7,
         "O": 2,
@@ -50,9 +50,9 @@
         "S": 1
     },
     {
-        "Név": "Triptofán",
-        "Betûjel": "W",
-        "Rövidítés": "Trp",
+        "Nev": "Triptofan",
+        "Betujel": "W",
+        "Rovidites": "Trp",
         "C": 11,
         "H": 12,
         "O": 2,
@@ -60,9 +60,9 @@
         "S": 0
     },
     {
-        "Név": "Valin",
-        "Betûjel": "V",
-        "Rövidítés": "Val",
+        "Nev": "Valin",
+        "Betujel": "V",
+        "Rovidites": "Val",
         "C": 5,
         "H": 11,
         "O": 2,
@@ -70,9 +70,9 @@
         "S": 0
     },
     {
-        "Név": "Leucin",
-        "Betûjel": "L",
-        "Rövidítés": "Leu",
+        "Nev": "Leucin",
+        "Betujel": "L",
+        "Rovidites": "Leu",
         "C": 6,
         "H": 13,
         "O": 2,
@@ -80,9 +80,9 @@
         "S": 0
     },
     {
-        "Név": "Izoleucin",
-        "Betûjel": "I",
-        "Rövidítés": "Ile",
+        "Nev": "Izoleucin",
+        "Betujel": "I",
+        "Rovidites": "Ile",
         "C": 6,
         "H": 13,
         "O": 2,
@@ -90,9 +90,9 @@
         "S": 0
     },
     {
-        "Név": "Metionin",
-        "Betûjel": "M",
-        "Rövidítés": "Met",
+        "Nev": "Metionin",
+        "Betujel": "M",
+        "Rovidites": "Met",
         "C": 5,
         "H": 11,
         "O": 2,
@@ -100,9 +100,9 @@
         "S": 1
     },
     {
-        "Név": "Prolin",
-        "Betûjel": "P",
-        "Rövidítés": "Pro",
+        "Nev": "Prolin",
+        "Betujel": "P",
+        "Rovidites": "Pro",
         "C": 5,
         "H": 9,
         "O": 2,
@@ -110,9 +110,9 @@
         "S": 0
     },
     {
-        "Név": "Szerin",
-        "Betûjel": "S",
-        "Rövidítés": "Ser",
+        "Nev": "Szerin",
+        "Betujel": "S",
+        "Rovidites": "Ser",
         "C": 3,
         "H": 7,
         "O": 3,
@@ -120,9 +120,9 @@
         "S": 0
     },
     {
-        "Név": "Treonin",
-        "Betûjel": "T",
-        "Rövidítés": "Thr",
+        "Nev": "Treonin",
+        "Betujel": "T",
+        "Rovidites": "Thr",
         "C": 4,
         "H": 9,
         "O": 3,
@@ -130,9 +130,9 @@
         "S": 0
     },
     {
-        "Név": "Aszparagin",
-        "Betûjel": "N",
-        "Rövidítés": "Asn",
+        "Nev": "Aszparagin",
+        "Betujel": "N",
+        "Rovidites": "Asn",
         "C": 4,
         "H": 8,
         "O": 3,
@@ -140,9 +140,9 @@
         "S": 0
     },
     {
-        "Név": "Glutamin",
-        "Betûjel": "Q",
-        "Rövidítés": "Gln",
+        "Nev": "Glutamin",
+        "Betujel": "Q",
+        "Rovidites": "Gln",
         "C": 5,
         "H": 10,
         "O": 3,
@@ -150,9 +150,9 @@
         "S": 0
     },
     {
-        "Név": "Tirozin",
-        "Betûjel": "Y",
-        "Rövidítés": "Tyr",
+        "Nev": "Tirozin",
+        "Betujel": "Y",
+        "Rovidites": "Tyr",
         "C": 9,
         "H": 11,
         "O": 3,
@@ -160,9 +160,9 @@
         "S": 0
     },
     {
-        "Név": "Hisztidin",
-        "Betûjel": "H",
-        "Rövidítés": "His",
+        "Nev": "Hisztidin",
+        "Betujel": "H",
+        "Rovidites": "His",
         "C": 6,
         "H": 9,
         "O": 2,
@@ -170,9 +170,9 @@
         "S": 0
     },
     {
-        "Név": "Lizin",
-        "Betûjel": "K",
-        "Rövidítés": "Lys",
+        "Nev": "Lizin",
+        "Betujel": "K",
+        "Rovidites": "Lys",
         "C": 6,
         "H": 14,
         "O": 2,
@@ -180,9 +180,9 @@
         "S": 0
     },
     {
-        "Név": "Aszparaginsav",
-        "Betûjel": "D",
-        "Rövidítés": "Asp",
+        "Nev": "Aszparaginsav",
+        "Betujel": "D",
+        "Rovidites": "Asp",
         "C": 4,
         "H": 7,
         "O": 4,
@@ -190,9 +190,9 @@
         "S": 0
     },
     {
-        "Név": "Glutaminsav",
-        "Betûjel": "E",
-        "Rövidítés": "Glu",
+        "Nev": "Glutaminsav",
+        "Betujel": "E",
+        "Rovidites": "Glu",
         "C": 5,
         "H": 9,
         "O": 4,
