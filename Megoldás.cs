@@ -9,6 +9,7 @@ namespace Fehérje
     internal class Megoldás
     {
         private List<Aminosav> aminosavak;
+        private List<string> bsaString;
 
         //public int SavakSzámaPróba
         //{
@@ -42,11 +43,28 @@ namespace Fehérje
         //}
 
 
+        public string BsaKiír
+        {
+            get
+            {
+                string vissza = "";
+                foreach (string s in bsaString)
+                {
+                    vissza += s;
+                }
+                return vissza;
+            }
+        }
 
-        public Megoldás(string forrás)
+
+
+        public Megoldás(string forrás, string bsaforrás)
         {
             reader r = new reader(forrás);
             aminosavak = r.readJSON();
+
+            bsareader br = new bsareader(bsaforrás);
+            bsaString = br.readJSON();
         }
     }
 }

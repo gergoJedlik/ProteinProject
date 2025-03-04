@@ -10,8 +10,7 @@ namespace Fehérje
     {
         static void Main(string[] args)
         {
-            Megoldás m = new Megoldás("../../aminosavak.json");
-            BsaMegoldás mb = new BsaMegoldás("../../bsa.json");
+            Megoldás m = new Megoldás("../../aminosavak.json", "../../bsa.json");
             //Console.WriteLine(m.SavakSzámaPróba);
             //Console.WriteLine(m.AminosavKiírPróba);
             Console.WriteLine("1. Feladat: ");
