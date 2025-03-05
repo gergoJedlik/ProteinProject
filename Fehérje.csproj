@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aminosav.cs" />
+    <Compile Include="bsareader.cs" />
     <Compile Include="Megoldás.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
