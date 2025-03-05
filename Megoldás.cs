@@ -9,7 +9,7 @@ namespace Fehérje
     internal class Megoldás
     {
         private List<Aminosav> aminosavak;
-        private List<string> bsaString;
+        private List<char> bsaString;
 
         //public int SavakSzámaPróba
         //{
@@ -43,20 +43,50 @@ namespace Fehérje
         //}
 
 
-        public string BsaKiír
+        //public string BsaKiír
+        //{
+        //    get
+        //    {
+        //        string vissza = "";
+        //        foreach (string s in bsaString)
+        //        {
+        //            vissza += s;
+        //        }
+        //        return vissza;
+        //    }
+        //}
+        private List<int> FehérjeLáncÖsszegképlete
         {
             get
             {
-                string vissza = "";
-                foreach (string s in bsaString)
+                int összesC = 0, összesH = 0, összesN = 0, összesO = 0, összesS = 0;
+
+                foreach (char item in bsaString)
                 {
-                    vissza += s;
+                    var aminosav = aminosavak.FirstOrDefault(a => a.Betujel == item);
+                    if (aminosav != null)
+                    {
+                        összesC += aminosav.S;
+                        összesH += aminosav.H;
+                        összesN += aminosav.N;
+                        összesO += aminosav.O;
+                        összesS += aminosav.S;
+                    }
                 }
-                return vissza;
-            }
+                List<int> lista = new List<int> { összesC, összesH, összesO, összesN, összesS };
+                return lista;
+                }
         }
 
+        public string FehérjeLáncÖsszegképletKiírása
+        {
+            get
+            {
+                List<int> lista = FehérjeLáncÖsszegképlete;
+                return $"C {lista[0]} H {lista[1]} O {lista[2]} N {lista[3]} S {lista[4]}";
+            }
 
+        } 
 
         public Megoldás(string forrás, string bsaforrás)
         {

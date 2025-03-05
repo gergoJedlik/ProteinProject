@@ -17,9 +17,9 @@ namespace Fehérje
             json_data = File.ReadAllText(file, encoding: UTF8Encoding.UTF8);
         }
 
-        public List<string> readJSON()
+        public List<char> readJSON()
         {
-            List<string> letters = JsonConvert.DeserializeObject<List<string>>(json_data);
+            List<char> letters = JsonConvert.DeserializeObject<List<char>>(json_data);
 
             return letters;
         }
