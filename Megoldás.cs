@@ -75,7 +75,7 @@ namespace Fehérje
                 }
                 List<int> lista = new List<int> { összesC, összesH, összesO, összesN, összesS };
                 return lista;
-                }
+            }
         }
 
         public string FehérjeLáncÖsszegképletKiírása
@@ -86,7 +86,48 @@ namespace Fehérje
                 return $"C {lista[0]} H {lista[1]} O {lista[2]} N {lista[3]} S {lista[4]}";
             }
 
-        } 
+        }
+        private Dictionary<string, int> FehérjeHasítás
+        {
+            get
+            {
+                Dictionary<string, int> adatok = new Dictionary<string, int>
+                {
+                    ["hosszaAktuális"] = 0,
+                    ["kezdetHelye"] = 0,
+                    ["végeHelye"] = 0,
+                    ["maxHossza"] = 0
+                };
+
+                for (int i = 0; i < bsaString.Count; i++)
+                {
+                    adatok["hosszaAktuális"]++;
+
+                    if (bsaString[i] == 'Y' || bsaString[i] == 'F' || bsaString[i] == 'W')
+                    {
+                        if (adatok["hosszaAktuális"] > adatok["maxHossza"])
+                        {
+                            adatok["maxHossza"] = adatok["hosszaAktuális"];
+                            adatok["végeHelye"] = i;
+                        }
+                        adatok["hosszaAktuális"] = 0;
+                    }
+                }
+
+                adatok["kezdetHelye"] = adatok["végeHelye"] - adatok["maxHossza"] + 1;
+                return adatok;
+            }
+        }
+
+        public string FehérjeHasításKiír
+        {
+            get
+            {
+                Dictionary<string, int> adatok = FehérjeHasítás;
+                return $"Hossza: {adatok["maxHossza"]}; Kezdet helye: {adatok["kezdetHelye"]}; Vége helye: {adatok["végeHelye"]}";
+            }
+        }
+
 
         public Megoldás(string forrás, string bsaforrás)
         {
