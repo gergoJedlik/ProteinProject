@@ -86,7 +86,24 @@ namespace Fehérje
                 return $"C {lista[0]} H {lista[1]} O {lista[2]} N {lista[3]} S {lista[4]}";
             }
 
-        } 
+        }
+
+        public int factorXICiszteinCount
+        {
+            get
+            {
+                int CiszteinCount = 0;
+                char prevLetter = bsaString[0];
+                foreach (char letter in bsaString.Skip(1))
+                {
+                    if (prevLetter == 'R' && (letter == 'A' || letter == 'V')) break;
+                    if (letter == 'C') CiszteinCount++;
+                    prevLetter = letter;
+                }
+
+                return CiszteinCount;
+            }
+        }
 
         public Megoldás(string forrás, string bsaforrás)
         {
@@ -96,5 +113,7 @@ namespace Fehérje
             bsareader br = new bsareader(bsaforrás);
             bsaString = br.readJSON();
         }
+
+        
     }
 }
