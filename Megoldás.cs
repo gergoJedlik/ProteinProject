@@ -89,18 +89,29 @@ namespace Fehérje
                 return RelativeMass;
             }
         }
+
+        private IOrderedEnumerable<KeyValuePair<string, int>> RelativeMassOfMoleculesInOrder
+        {
+            get
+            {
+                var Order = RelativeMassOfMolecules.OrderBy(x => x.Value);
+                return Order;
+            }
+        }
         public string RelativeMassWriter
         {
             get
             {
                 string Output = "";
-                foreach (var e in RelativeMassOfMolecules)
+                foreach (var e in RelativeMassOfMoleculesInOrder)
                 {
                     Output += $"\n{e.Key} {e.Value}";
                 }
                 return Output;
             }
         }
+
+        
         private List<int> FehérjeLáncÖsszegképlete
         {
             get
