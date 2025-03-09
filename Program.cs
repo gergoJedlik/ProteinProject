@@ -17,7 +17,8 @@ namespace Fehérje
             //Console.WriteLine(m.AminosavKiírPróba);
             //Console.WriteLine($"4. Feladat: {m.FehérjeLáncÖsszegképletKiírása}");
             //Console.WriteLine($"6. Feladat: A Factor XI általi hasítás utáni első részletben {m.factorXICiszteinCount} Cisztein található.");
-
+            //Console.WriteLine(m.RelativeMassWriter);
+            Write(writer, 3, m.RelativeMassWriter);
             Write(writer, 4, $"{m.FehérjeLáncÖsszegképletKiírása}");
 
             Write(writer, 6, $"A Factor XI általi hasítás utáni első részletben {m.factorXICiszteinCount} Cisztein található.");
