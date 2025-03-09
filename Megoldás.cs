@@ -55,6 +55,20 @@ namespace Fehérje
         //        return vissza;
         //    }
         //}
+        public List<int> MassOfSubstances
+        {
+            get
+            {
+                int Coal = 12;
+                int Hydrogen = 1;
+                int Oxygen = 16;
+                int Nitrogen = 14;
+                int Sulfur = 32;
+
+                List<int> MassOfSubs = new List<int> { Coal, Hydrogen, Oxygen, Nitrogen, Sulfur };
+                return MassOfSubs;
+            }
+        }
         private List<int> FehérjeLáncÖsszegképlete
         {
             get
