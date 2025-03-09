@@ -14,14 +14,9 @@ namespace Fehérje
 
             Writer writer = new Writer();
 
-            //Console.WriteLine(m.SavakSzámaPróba);
-            //Console.WriteLine(m.AminosavKiírPróba);
-            //Console.WriteLine($"4. Feladat: {m.FehérjeLáncÖsszegképletKiírása}");
-            //Console.WriteLine($"6. Feladat: A Factor XI általi hasítás utáni első részletben {m.factorXICiszteinCount} Cisztein található.");
-            //Console.WriteLine(m.RelativeMassWriter);
             Write(writer, 3, m.RelativeMassWriter);
-            Write(writer, 4, $"{m.FehérjeLáncÖsszegképletKiírása}");
-            Write(writer, 5, $"{m.FehérjeHasításKiír}")
+            Write(writer, 4, $"{m.ProteinChainCompositionDisplay}");
+            Write(writer, 5, $"{m.ProteinSplittingDisplay}");
             Write(writer, 6, $"A Factor XI általi hasítás utáni első részletben {m.factorXICiszteinCount} Cisztein található.");
 
             writer.writeToFile();

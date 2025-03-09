@@ -8,53 +8,9 @@ namespace Fehérje
 {
     internal class Megoldás
     {
-        private List<Aminosav> aminosavak;
+        private List<Aminosav> aminoAcids;
         private List<char> bsaString;
 
-        //public int SavakSzámaPróba
-        //{
-        //    get
-        //    {
-        //        return aminosavak.Count;
-        //    }
-        //}
-        //public Aminosav ElsőAminosavPróba
-        //{
-        //    get
-        //    {
-        //        return aminosavak.First();
-        //    }
-        //}
-        //public string AminosavKiírPróba
-        //{
-        //    get
-        //    {
-        //        string vissza = "";
-        //        vissza += $"\n\tVálasztott aminosav: {ElsőAminosavPróba.Nev}";
-        //        vissza += $"\n\tVálasztott aminosav betűjele: {ElsőAminosavPróba.Betujel}";
-        //        vissza += $"\n\tVálasztott aminosav rövidítése: {ElsőAminosavPróba.Rovidites}";
-        //        vissza += $"\n\tC száma: {ElsőAminosavPróba.C}";
-        //        vissza += $"\n\tH száma: {ElsőAminosavPróba.H}";
-        //        vissza += $"\n\tO száma: {ElsőAminosavPróba.O}";
-        //        vissza += $"\n\tN száma: {ElsőAminosavPróba.N}";
-        //        vissza += $"\n\tS száma: {ElsőAminosavPróba.S}";
-        //        return vissza;
-        //    }
-        //}
-
-
-        //public string BsaKiír
-        //{
-        //    get
-        //    {
-        //        string vissza = "";
-        //        foreach (string s in bsaString)
-        //        {
-        //            vissza += s;
-        //        }
-        //        return vissza;
-        //    }
-        //}
         private List<int> MassOfSubstances
         {
             get
@@ -76,7 +32,7 @@ namespace Fehérje
             {
                 Dictionary<string, int> RelativeMass = new Dictionary<string, int>();
 
-                foreach (var e in aminosavak)
+                foreach (var e in aminoAcids)
                 {
                     int MassSum = 0;
                     MassSum += e.C * MassOfSubstances[0];
@@ -105,85 +61,84 @@ namespace Fehérje
                 string Output = "";
                 foreach (var e in RelativeMassOfMoleculesInOrder)
                 {
-                    Output += $"\n{e.Key} {e.Value}";
+                    Output += $"{e.Key} {e.Value}; ";
                 }
                 return Output;
             }
         }
 
-        
 
-        private List<int> FehérjeLáncÖsszegképlete
+
+        private List<int> ProteinChainComposition
         {
             get
             {
-                int összesC = 0, összesH = 0, összesN = 0, összesO = 0, összesS = 0;
+                int totalC = 0, totalH = 0, totalN = 0, totalO = 0, totalS = 0;
 
                 foreach (char item in bsaString)
                 {
-                    var aminosav = aminosavak.FirstOrDefault(a => a.Betujel == item);
-                    if (aminosav != null)
+                    var aminoAcid = aminoAcids.FirstOrDefault(a => a.Betujel == item);
+                    if (aminoAcid != null)
                     {
-                        összesC += aminosav.S;
-                        összesH += aminosav.H;
-                        összesN += aminosav.N;
-                        összesO += aminosav.O;
-                        összesS += aminosav.S;
+                        totalC += aminoAcid.C;
+                        totalH += aminoAcid.H;
+                        totalN += aminoAcid.N;
+                        totalO += aminoAcid.O;
+                        totalS += aminoAcid.S;
                     }
                 }
-                List<int> lista = new List<int> { összesC, összesH, összesO, összesN, összesS };
-                return lista;
+                List<int> list = new List<int> { totalC, totalH, totalO, totalN, totalS };
+                return list;
             }
         }
 
-        public string FehérjeLáncÖsszegképletKiírása
+        public string ProteinChainCompositionDisplay
         {
             get
             {
-                List<int> lista = FehérjeLáncÖsszegképlete;
-                return $"C {lista[0]} H {lista[1]} O {lista[2]} N {lista[3]} S {lista[4]}";
+                List<int> list = ProteinChainComposition;
+                return $"C {list[0]} H {list[1]} O {list[2]} N {list[3]} S {list[4]}";
             }
-
         }
 
-        private Dictionary<string, int> FehérjeHasítás
+        private Dictionary<string, int> ProteinSplitting
         {
             get
             {
-                Dictionary<string, int> adatok = new Dictionary<string, int>
+                Dictionary<string, int> data = new Dictionary<string, int>
                 {
-                    ["hosszaAktuális"] = 0,
-                    ["kezdetHelye"] = 0,
-                    ["végeHelye"] = 0,
-                    ["maxHossza"] = 0
+                    ["currentLength"] = 0,
+                    ["startPosition"] = 0,
+                    ["endPosition"] = 0,
+                    ["maxLength"] = 0
                 };
 
                 for (int i = 0; i < bsaString.Count; i++)
                 {
-                    adatok["hosszaAktuális"]++;
+                    data["currentLength"]++;
 
                     if (bsaString[i] == 'Y' || bsaString[i] == 'F' || bsaString[i] == 'W')
                     {
-                        if (adatok["hosszaAktuális"] > adatok["maxHossza"])
+                        if (data["currentLength"] > data["maxLength"])
                         {
-                            adatok["maxHossza"] = adatok["hosszaAktuális"];
-                            adatok["végeHelye"] = i;
+                            data["maxLength"] = data["currentLength"];
+                            data["endPosition"] = i;
                         }
-                        adatok["hosszaAktuális"] = 0;
+                        data["currentLength"] = 0;
                     }
                 }
 
-                adatok["kezdetHelye"] = adatok["végeHelye"] - adatok["maxHossza"] + 1;
-                return adatok;
+                data["startPosition"] = data["endPosition"] - data["maxLength"] + 1;
+                return data;
             }
         }
 
-        public string FehérjeHasításKiír
+        public string ProteinSplittingDisplay
         {
             get
             {
-                Dictionary<string, int> adatok = FehérjeHasítás;
-                return $"Hossza: {adatok["maxHossza"]}; Kezdet helye: {adatok["kezdetHelye"]}; Vége helye: {adatok["végeHelye"]}";
+                Dictionary<string, int> data = ProteinSplitting;
+                return $"Hossza: {data["maxLength"]}; Kezdet helye: {data["startPosition"]}; Vége helye: {data["endPosition"]}";
             }
         }
 
@@ -210,7 +165,7 @@ namespace Fehérje
         public Megoldás(string forrás, string bsaforrás)
         {
             reader r = new reader(forrás);
-            aminosavak = r.readJSON();
+            aminoAcids = r.readJSON();
 
             bsareader br = new bsareader(bsaforrás);
             bsaString = br.readJSON();
