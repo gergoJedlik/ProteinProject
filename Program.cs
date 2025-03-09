@@ -11,6 +11,7 @@ namespace Fehérje
         static void Main(string[] args)
         {
             Megoldás m = new Megoldás("../../aminosavak.json", "../../bsa.json");
+
             Writer writer = new Writer();
 
             //Console.WriteLine(m.SavakSzámaPróba);
@@ -20,10 +21,11 @@ namespace Fehérje
             //Console.WriteLine(m.RelativeMassWriter);
             Write(writer, 3, m.RelativeMassWriter);
             Write(writer, 4, $"{m.FehérjeLáncÖsszegképletKiírása}");
-
+            Write(writer, 5, $"{m.FehérjeHasításKiír}")
             Write(writer, 6, $"A Factor XI általi hasítás utáni első részletben {m.factorXICiszteinCount} Cisztein található.");
 
             writer.writeToFile();
+
             Console.ReadKey();
         }
 

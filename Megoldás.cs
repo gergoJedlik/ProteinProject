@@ -112,6 +112,7 @@ namespace Fehérje
         }
 
         
+
         private List<int> FehérjeLáncÖsszegképlete
         {
             get
@@ -132,7 +133,7 @@ namespace Fehérje
                 }
                 List<int> lista = new List<int> { összesC, összesH, összesO, összesN, összesS };
                 return lista;
-                }
+            }
         }
 
         public string FehérjeLáncÖsszegképletKiírása
@@ -144,6 +145,49 @@ namespace Fehérje
             }
 
         }
+
+        private Dictionary<string, int> FehérjeHasítás
+        {
+            get
+            {
+                Dictionary<string, int> adatok = new Dictionary<string, int>
+                {
+                    ["hosszaAktuális"] = 0,
+                    ["kezdetHelye"] = 0,
+                    ["végeHelye"] = 0,
+                    ["maxHossza"] = 0
+                };
+
+                for (int i = 0; i < bsaString.Count; i++)
+                {
+                    adatok["hosszaAktuális"]++;
+
+                    if (bsaString[i] == 'Y' || bsaString[i] == 'F' || bsaString[i] == 'W')
+                    {
+                        if (adatok["hosszaAktuális"] > adatok["maxHossza"])
+                        {
+                            adatok["maxHossza"] = adatok["hosszaAktuális"];
+                            adatok["végeHelye"] = i;
+                        }
+                        adatok["hosszaAktuális"] = 0;
+                    }
+                }
+
+                adatok["kezdetHelye"] = adatok["végeHelye"] - adatok["maxHossza"] + 1;
+                return adatok;
+            }
+        }
+
+        public string FehérjeHasításKiír
+        {
+            get
+            {
+                Dictionary<string, int> adatok = FehérjeHasítás;
+                return $"Hossza: {adatok["maxHossza"]}; Kezdet helye: {adatok["kezdetHelye"]}; Vége helye: {adatok["végeHelye"]}";
+            }
+        }
+
+
 
         public int factorXICiszteinCount
         {
@@ -161,6 +205,7 @@ namespace Fehérje
                 return CiszteinCount;
             }
         }
+
 
         public Megoldás(string forrás, string bsaforrás)
         {
