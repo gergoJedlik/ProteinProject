@@ -13,7 +13,7 @@ namespace Fehérje
         private List<Task> Taskdata { get; set; }
         public Writer()
         {
-            System.IO.File.WriteAllText("../../valaszok.txt", "");
+            Taskdata = new List<Task>();
         }
 
         public void addToData(int taskNum, string answer)
@@ -24,7 +24,7 @@ namespace Fehérje
 
         public void writeToFile() {
             string json = JsonConvert.SerializeObject(Taskdata);
-            System.IO.File.WriteAllText("../../valaszok.txt", json);
+            System.IO.File.WriteAllText("../../eredmenyek.json", json);
         }
     }
 }

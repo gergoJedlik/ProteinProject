@@ -61,7 +61,7 @@ namespace Fehérje
                 string Output = "";
                 foreach (var e in RelativeMassOfMoleculesInOrder)
                 {
-                    Output += $"\n{e.Key} {e.Value}";
+                    Output += $"{e.Key} {e.Value}; ";
                 }
                 return Output;
             }
