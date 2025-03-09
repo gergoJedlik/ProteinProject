@@ -55,7 +55,7 @@ namespace Fehérje
         //        return vissza;
         //    }
         //}
-        public List<int> MassOfSubstances
+        private List<int> MassOfSubstances
         {
             get
             {
@@ -67,6 +67,38 @@ namespace Fehérje
 
                 List<int> MassOfSubs = new List<int> { Coal, Hydrogen, Oxygen, Nitrogen, Sulfur };
                 return MassOfSubs;
+            }
+        }
+
+        private Dictionary<string, int> RelativeMassOfMolecules
+        {
+            get
+            {
+                Dictionary<string, int> RelativeMass = new Dictionary<string, int>();
+
+                foreach (var e in aminosavak)
+                {
+                    int MassSum = 0;
+                    MassSum += e.C * MassOfSubstances[0];
+                    MassSum += e.H * MassOfSubstances[1];
+                    MassSum += e.O * MassOfSubstances[2];
+                    MassSum += e.N * MassOfSubstances[3];
+                    MassSum += e.S * MassOfSubstances[4];
+                    RelativeMass.Add(e.Rovidites, MassSum);
+                }
+                return RelativeMass;
+            }
+        }
+        public string RelativeMassWriter
+        {
+            get
+            {
+                string Output = "";
+                foreach (var e in RelativeMassOfMolecules)
+                {
+                    Output += $"\n{e.Key} {e.Value}";
+                }
+                return Output;
             }
         }
         private List<int> FehérjeLáncÖsszegképlete
