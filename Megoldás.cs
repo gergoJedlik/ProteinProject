@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Fehérje
 {
@@ -15,11 +15,7 @@ namespace Fehérje
         {
             get
             {
-                int Coal = 12;
-                int Hydrogen = 1;
-                int Oxygen = 16;
-                int Nitrogen = 14;
-                int Sulfur = 32;
+                const int Coal = 12, Hydrogen = 1, Oxygen = 16, Nitrogen = 14, Sulfur = 32;
 
                 List<int> MassOfSubs = new List<int> { Coal, Hydrogen, Oxygen, Nitrogen, Sulfur };
                 return MassOfSubs;
@@ -46,11 +42,11 @@ namespace Fehérje
             }
         }
 
-        private IOrderedEnumerable<KeyValuePair<string, int>> RelativeMassOfMoleculesInOrder
+        private Dictionary<string, int> RelativeMassOfMoleculesInOrder
         {
             get
             {
-                var Order = RelativeMassOfMolecules.OrderBy(x => x.Value);
+                var Order = RelativeMassOfMolecules.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
                 return Order;
             }
         }

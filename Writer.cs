@@ -1,16 +1,12 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace Fehérje
 {
     class Writer
     {
         private List<Task> Taskdata { get; set; }
+
         public Writer()
         {
             Taskdata = new List<Task>();
@@ -20,7 +16,6 @@ namespace Fehérje
         {
             Taskdata.Add(new Task(taskNum, answer));
         }
-
 
         public void writeToFile() {
             string json = JsonConvert.SerializeObject(Taskdata);
