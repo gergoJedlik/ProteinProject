@@ -86,7 +86,10 @@ namespace Fehérje
                         totalO += aminoAcid.O;
                         totalS += aminoAcid.S;
                     }
+
                 }
+                totalO -= (bsaString.Count - 1);
+                totalH -= 2 * (bsaString.Count - 1);
                 List<int> list = new List<int> { totalC, totalH, totalO, totalN, totalS };
                 return list;
             }
